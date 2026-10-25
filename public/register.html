@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px #00000015;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3730a3;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        #message {
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+
+        <form id="registerForm">
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+                maxlength="50"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+                maxlength="100"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password (minimum 8 characters)"
+                required
+                minlength="8"
+            >
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <p>Already registered? <a href="/login.html">Login here</a></p>
+    </div>
+
+    <script src="/register.js"></script>
+</body>
+</html>
